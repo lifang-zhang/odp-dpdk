@@ -47,7 +47,7 @@ AC_ARG_ENABLE([dpdk-shared],
 # DPDK pmd drivers are not linked unless the --whole-archive option is
 # used. No spaces are allowed between the --whole-archive flags.
 ##########################################################################
-ODP_DPDK([$DPDK_PATH], [$dpdk_shared], [],
+ODP_DPDK([$dpdk_shared], [],
 	 [AC_MSG_FAILURE([can't find DPDK])])
 AM_CONDITIONAL([ODP_PKTIO_PCAP], [test x$have_pmd_pcap = xyes])
 
